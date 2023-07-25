@@ -34,10 +34,32 @@ gobuster dir -r -k -x .php,.txt,.html -r -k --wordlist /usr/share/wordlists/dirb
 
 Достаточно быстро находим директорию /assets, проверим её
 
+```sh
+http://your_machine_ip/assets
+```
+
 ![assets_check](screenshots/4.1.png)
 
 В данной директории находятся:
-- 
+- RickRolled.mp4 - Видеозапись с понятным содержанием, не трогаем пока-что, т.к. не быть закрикроленными
+- style.css - CSS документ
+
+Откроем style.css
 
 [^1]:https://tryhackme.com/room/yearoftherabbit#
 
+![style_check](screenshots/4.png)
+
+Наблюдаем  подсказку посмотреть страницу /sup3r_s3cr3t_fl4g.php
+
+Переходим на неё
+
+```sh
+http://your_machine_ip/sup3r_s3cr3t_fl4g.php
+```
+
+![style_check](screenshots/5.png)
+
+Но что мы тут видим?
+
+![style_check](screenshots/6.png)
