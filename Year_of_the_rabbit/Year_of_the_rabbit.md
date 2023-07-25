@@ -178,9 +178,9 @@ dcode.xyz идентифицировал его как brainfuck, переход
 ssh eli@your_machine_ip
 ```
 
-Наблюдаем достаточно интересное сообщение:
+Наблюдаем сообщение:
 
-![strings_out](screenshots/20.png)
+![ssh_out](screenshots/20.png)
 
 Осмотримся 
 
@@ -188,16 +188,55 @@ ssh eli@your_machine_ip
 ls -l
 ```
 
-![strings_out](screenshots/21.png)
+![recon_out](screenshots/21.png)
 
-Пока-что ничего интересного
+Пока-что ничего полезного
 
+Но мы помним, что в приветсвенном сообщении слово s3cr3t было написано не совсем обычно, попробуем поискать его
 
-![strings_out](screenshots/22.png)
-![strings_out](screenshots/23.png)
-![strings_out](screenshots/24.png)
-![strings_out](screenshots/25.png)
-![strings_out](screenshots/26.png)
+```console
+locate s3cr3t
+```
+
+![locate_s](screenshots/22.png)
+
+А вот тут что-то интересное, в результатах видим /usr/games/s3cr3t/.th1s_m3ss4ag3_15_f0r_gw3nd0l1n3_0nly!
+
+Посмотрим что в нем
+
+```console
+cat /usr/games/s3cr3t/.th1s_m3ss4ag3_15_f0r_gw3nd0l1n3_0nly\!
+```
+![read-s](screenshots/23.png)
+
+Мы получили пароль от учетной записи gwendoline, но пока эта учетная запись нам нигде не нужна, ищем user flag дальше.
+
+Стоит поискать user.txt
+
+```console
+locate user.txt
+```
+
+![locate-user](screenshots/24.png)
+
+Попробуем прочитать его
+
+![cat-user](screenshots/25.png)
+
+eli не имеет к нему доступа, вероятно стоит попробовать учетную запись gwendoline
+
+![gwen-log](screenshots/26.png)
+
+Мы успешно вошли, попробуем снова прочитать user.txt
+
+![cat-user2](screenshots/27.png)
+![cat-user2](screenshots/28.png)
+![cat-user2](screenshots/29.png)
+![cat-user2](screenshots/30.png)
+![cat-user2](screenshots/31.png)
+![cat-user2](screenshots/32.png)
+![cat-user2](screenshots/33.png)
+![cat-user2](screenshots/34.png)
 
 
 [^1]:https://tryhackme.com/room/yearoftherabbit#
