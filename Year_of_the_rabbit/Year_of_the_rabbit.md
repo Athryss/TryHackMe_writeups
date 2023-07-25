@@ -5,8 +5,7 @@
 ## Nmap
 Сканируем машину при помощи Nmap. <br />
 <br />
-```
-sh
+``` sh
 nmap -A -sV your_machine_ip
 ```
 ![nmap_scan](https://github.com/Athryss/TryHackMe_writeups/blob/main/Year_of_the_rabbit/screenshots/1.png?raw=true)
