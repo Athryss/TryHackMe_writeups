@@ -166,13 +166,31 @@ Oh, we've just got brainf#cked
 
 ![dcode.xyz](screenshots/18.png)
 
-dcode.xyz идентифицировал его как brainfuck
+dcode.xyz идентифицировал его как brainfuck, переходим на его страницу и снова вставляем наш шифротекст
 
 ![dcode.xyz.2](screenshots/19.png)
 
+В результате получаем учетные данные от пользователя eli
+
+Подключаемся по ssh при помощи нполученных учетных данных
+
+```console
+ssh eli@your_machine_ip
+```
+
+Наблюдаем достаточно интересное сообщение:
+
 ![strings_out](screenshots/20.png)
 
+Осмотримся 
+
+```console
+ls -l
+```
+
 ![strings_out](screenshots/21.png)
+
+Пока-что ничего интересного
 
 
 [^1]:https://tryhackme.com/room/yearoftherabbit#
