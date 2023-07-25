@@ -86,5 +86,11 @@ http://your_machine_ip/sup3r_s3cr3t_fl4g.php
 
 А вот тут уже что-то есть
 
+Наблюдаем скрытую директорию /WExYY2Cv-qU
+
+Переходим к данной директории
+
+![hidden_dir](screenshots/10.1.png)
+
 
 
