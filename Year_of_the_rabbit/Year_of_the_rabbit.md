@@ -292,9 +292,17 @@ sudo -u#-1 /usr/bin/vi /home/gwendoline/user.txt
 
 ![cat-user2](screenshots/34.png)
 
+Вводим данную команду
+
 ![cat-user2](screenshots/35.png)
 
+Успешно, нами получены root права
+
+Теперь перейдем в bash , осмотримся и прочитаем root.txt
+
 ![cat-user2](screenshots/36.png)
+
+Мы нашли root flag!
 
 
 [^1]:https://tryhackme.com/room/yearoftherabbit#
