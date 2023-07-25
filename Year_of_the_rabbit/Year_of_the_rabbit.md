@@ -193,6 +193,13 @@ ls -l
 Пока-что ничего интересного
 
 
+![strings_out](screenshots/22.png)
+![strings_out](screenshots/23.png)
+![strings_out](screenshots/24.png)
+![strings_out](screenshots/25.png)
+![strings_out](screenshots/26.png)
+
+
 [^1]:https://tryhackme.com/room/yearoftherabbit#
 
 
