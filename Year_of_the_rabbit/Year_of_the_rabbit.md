@@ -110,11 +110,12 @@ strings Desktop/Hot_Babe.png
 
 ![strings_out](screenshots/12.png)
 
-Из этого следует что нужно провести атаку перебором на ssh, для этого будем использовать инструмент hydra
+Мы получили username и много паролей, из этого следует, что нужно провести атаку перебором на ssh, для этого будем использовать инструмент hydra
 
 Но для начала создадим словарь со всеми вариантами пароля
 
-Создаем .txt документ (я назвал его rabbit_worldist) и открываем его с помощью nano
+Создаем .txt документ (я назвал его rabbit_worldist) и открываем его с помощью nano.
+Вставляем туда наши данные, полученные из strings, сохраняем изменения и закрываем
 
 ```console
 sudo nano Desktop/rabbit_wordlist.txt
@@ -122,9 +123,15 @@ sudo nano Desktop/rabbit_wordlist.txt
 
 ![strings_out](screenshots/13.png)
 
-Вставляем туда наши данные, полученные из strings
+Запускаем hydra, выбираем созданный нами словарь
 
-![strings_out](screenshots/14.png)
+![hydra](screenshots/14.png)
+
+В результате hydra подобрала нам пароль от ftpuser - 5iez1wGXKfPKQ
+
+Попробуем войти при помощи этих данных
+
+![strings_out](screenshots/15.png)
 
 
 [^1]:https://tryhackme.com/room/yearoftherabbit#
