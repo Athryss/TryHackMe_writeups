@@ -20,7 +20,7 @@ nmap -A -sV your_machine_ip
 http://your_machine_ip
 ```
 
-![nmap_scan](screenshots/3.png)
+![http_check](screenshots/3.png)
 
 Обнаруживаем стандартную страницу Apache, пока-что ничего нас интересующего
 
@@ -30,6 +30,14 @@ http://your_machine_ip
 gobuster dir -r -k -x .php,.txt,.html -r -k --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt --url your_machine_ip
 ```
 
-![nmap_scan](screenshots/2.png)
+![gobuster](screenshots/2.png)
+
+Достаточно быстро находим директорию /assets, проверим её
+
+![assets_check](screenshots/4.1.png)
+
+В данной директории находятся:
+- 
 
 [^1]:https://tryhackme.com/room/yearoftherabbit#
+
