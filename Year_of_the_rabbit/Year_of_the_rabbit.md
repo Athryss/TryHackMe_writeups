@@ -1,5 +1,5 @@
 # Year of the Rabbit
 ## Questions:
-What is the user flag? /br
-What is the root flag?
+[^1] What is the user flag?
+[^2] What is the root flag?
 ### 
