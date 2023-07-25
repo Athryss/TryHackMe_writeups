@@ -27,7 +27,7 @@ http://your_machine_ip
 Произдведем поиск директорий при помощи gobuster
 
 ```console
-gobuster dir
+gobuster dir -r -k -x .php,.txt,.html -r -k --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt --url your_machine_ip
 ```
 
 ![nmap_scan](screenshots/2.png)
