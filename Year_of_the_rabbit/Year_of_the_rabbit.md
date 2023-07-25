@@ -131,7 +131,13 @@ sudo nano Desktop/rabbit_wordlist.txt
 
 Попробуем войти при помощи этих данных
 
-![strings_out](screenshots/15.png)
+![inside](screenshots/15.png)
+
+Мы внутри
+Посмотрим что вокруг нас
+![strings_out](screenshots/16.png)
+![strings_out](screenshots/17.png)
+![strings_out](screenshots/18.png)
 
 
 [^1]:https://tryhackme.com/room/yearoftherabbit#
