@@ -14,6 +14,8 @@ nmap -A -sV your_machine_ip
 - 22 port - SSH (OpenSSH 6.7p1)
 - 80 port - HTTP (Apache 2.4.10)
 
+## Web-ресурсы 
+
 Проверим активный веб-сервис
 
 ```sh
@@ -63,3 +65,26 @@ http://your_machine_ip/sup3r_s3cr3t_fl4g.php
 Но что мы тут видим?
 
 ![style_check](screenshots/6.png)
+
+Если присмотреться, то можно заметить что происходит переадресация с http://your_machine_ip/sup3r_s3cr3t_fl4g.php на http://your_machine_ip/sup3r_s3cret_fl4g, что достаточно интересно, попробуем изучить данный вопрос повнимательнее при помощи burp suite
+
+Заходим в burp suite, выбираем proxy - intercept и включаем перехват 
+
+```sh
+http://your_machine_ip/sup3r_s3cr3t_fl4g.php
+```
+
+![burp_1](screenshots/7.png)
+
+Вводим нашу ссылку
+
+![burp_2](screenshots/8.png)
+
+Сначала ничего интересного
+
+![burp_2](screenshots/9.png)
+
+А вот тут уже что-то есть
+
+
+
