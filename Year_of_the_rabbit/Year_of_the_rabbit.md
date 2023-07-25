@@ -2,12 +2,24 @@
 ## Questions:
 1. What is the user flag? <br />
 1. What is the root flag? <br />
-## Nmap
+## Сканирование
 Сканируем машину при помощи Nmap. <br />
-<br />
 ```console
 nmap -A -sV your_machine_ip
 ```
-![nmap_scan](https://github.com/Athryss/TryHackMe_writeups/blob/main/Year_of_the_rabbit/screenshots/1.png?raw=true)
+![nmap_scan](screenshots/1.png)
+<br />
+В результате сканирования мы обнаружили: 
+- 21 port - FTP (vsftpd 3.0.2)
+- 22 port - SSH (OpenSSH 6.7p1)
+- 80 port - HTTP (Apache 2.4.10)
+<br />
+Проверим активный веб-сервис
+
+```sh
+http://your_machine_ip
+```
+
+![nmap_scan](screenshots/3.png)
 
 [^1]:https://tryhackme.com/room/yearoftherabbit#
