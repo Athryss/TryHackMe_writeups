@@ -136,7 +136,7 @@ hydra -l ftpuser -P Descktop/rabbit_wordlist.txt ftp://your_machine_ip/
 Попробуем войти при помощи этих данных и осмотреться
 
 ```console
-ftp your_machine_ip
+$ ftp your_machine_ip
 ```
 ```console
 ftp>ls
