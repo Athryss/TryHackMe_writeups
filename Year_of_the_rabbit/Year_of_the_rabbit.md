@@ -269,7 +269,7 @@ sudo -V
 
 ![cat-user2](screenshots/30.png)
 
-Находим CVE-2019-14287
+Находим  [CVE-2019-14287](https://nvd.nist.gov/vuln/detail/CVE-2019-14287).
 
 ![cat-user2](screenshots/31.png)
 
@@ -304,6 +304,7 @@ sudo -u#-1 /usr/bin/vi /home/gwendoline/user.txt
 
 Мы нашли root flag!
 
+## Благодярю за внимание 
 
 [^1]:https://tryhackme.com/room/yearoftherabbit#
 
