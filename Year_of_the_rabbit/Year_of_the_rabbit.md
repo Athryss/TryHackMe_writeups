@@ -136,10 +136,10 @@ hydra -l ftpuser -P Descktop/rabbit_wordlist.txt ftp://your_machine_ip/
 Попробуем войти при помощи этих данных и осмотреться
 
 ```console
-$ ftp your_machine_ip
+ftp your_machine_ip
 ```
 ```console
-ftp>ls
+ftp> ls
 ```
 
 ![inside](screenshots/15.png)
@@ -147,11 +147,32 @@ ftp>ls
 Наблюдаем файл Eli's_Creds.txt, скачаем его
 
 ```console
-ftp>get Eli's_Creds.txt
+ftp> get Eli's_Creds.txt
 ```
 ![strings_out](screenshots/16.png)
-![strings_out](screenshots/17.png)
-![strings_out](screenshots/18.png)
+
+Откроем его при помощи nano
+
+```console
+sudo nano Eli's_Creds.txt
+```
+
+![brainfuck](screenshots/17.png)
+
+Oh, we've just got brainf#cked
+
+Переходм на замечательный ресурс [dcode.xyz](https://dcode.fr/en).
+Выбираем инструмент Cipher Identifier, и вставляем наш шфиротекст
+
+![dcode.xyz](screenshots/18.png)
+
+dcode.xyz идентифицировал его как brainfuck
+
+![dcode.xyz.2](screenshots/19.png)
+
+![strings_out](screenshots/20.png)
+
+![strings_out](screenshots/21.png)
 
 
 [^1]:https://tryhackme.com/room/yearoftherabbit#
