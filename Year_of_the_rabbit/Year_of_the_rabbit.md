@@ -48,8 +48,6 @@ http://your_machine_ip/assets
 
 Откроем style.css
 
-[^1]:https://tryhackme.com/room/yearoftherabbit#
-
 ![style_check](screenshots/4.png)
 
 Наблюдаем  подсказку посмотреть страницу /sup3r_s3cr3t_fl4g.php
@@ -91,6 +89,47 @@ http://your_machine_ip/sup3r_s3cr3t_fl4g.php
 Переходим к данной директории
 
 ![hidden_dir](screenshots/10.1.png)
+
+Мы можем наблюдать в ней изображение с названием Hot_Babe.png, откроем его
+
+![Hot_babe](screenshots/10.png)
+
+Описание не врало, там действительно находится Hot_Babe
+
+## Компрометация машины
+
+Cкачаем данное изображение и проверим его при помощи утилиты strings
+
+```console
+strings Desktop/Hot_Babe.png
+```
+
+![strings_in](screenshots/11.png)
+
+Вводим команду, на выходе получаем большое количество ненужных данных, листаем вниз, пока не наткнемся на подсказку
+
+![strings_out](screenshots/12.png)
+
+Из этого следует что нужно провести атаку перебором на ssh, для этого будем использовать инструмент hydra
+
+Но для начала создадим словарь со всеми вариантами пароля
+
+Создаем .txt документ (я назвал его rabbit_worldist) и открываем его с помощью nano
+
+```console
+sudo nano Desktop/rabbit_wordlist.txt
+```
+
+![strings_out](screenshots/13.png)
+
+Вставляем туда наши данные, полученные из strings
+
+![strings_out](screenshots/14.png)
+
+
+[^1]:https://tryhackme.com/room/yearoftherabbit#
+
+
 
 
 
