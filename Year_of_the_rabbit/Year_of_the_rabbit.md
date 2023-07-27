@@ -2,6 +2,7 @@
 ## Questions:
 1. What is the user flag? <br />
 1. What is the root flag? <br />
+
 ## Enumiration
 Сканируем машину при помощи Nmap. <br />
 ```console
