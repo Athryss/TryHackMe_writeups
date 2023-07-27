@@ -2,7 +2,7 @@
 ## Questions:
 1. What is the user flag? <br />
 1. What is the root flag? <br />
-## Сканирование
+## Enumiration
 Сканируем машину при помощи Nmap. <br />
 ```console
 nmap -A -sV your_machine_ip
@@ -96,7 +96,7 @@ http://your_machine_ip/sup3r_s3cr3t_fl4g.php
 
 Описание не врало, там действительно находится Hot_Babe
 
-## Компрометация машины, поиск User flag
+## User compromitation
 
 Cкачаем данное изображение и проверим его при помощи утилиты strings
 
@@ -244,7 +244,7 @@ cat home/gwendoline/user.txt
 
 Мы получили User flag! 
 
-## Поиск Root flag
+## Root compromitation
 
 Посмотрим, можем ли мы выполнять команды от sudo
 
